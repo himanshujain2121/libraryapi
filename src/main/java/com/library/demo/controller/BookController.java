@@ -28,6 +28,11 @@ public class BookController {
 		return bookService.getAllBooks();
 	}
 	
+	@GetMapping("/book/{id}")
+	public Book findBook(@PathVariable(value = "id") Integer id){
+		return bookService.findBook(id);
+	}
+	
 	@PutMapping("/update/{id}")
 	public Book updateBook(@RequestBody Book book,@PathVariable(value = "id") Integer id) {
 		return bookService.updateBook(book, id);

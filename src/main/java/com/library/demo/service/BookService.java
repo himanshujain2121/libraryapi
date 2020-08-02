@@ -25,6 +25,9 @@ public class BookService {
 	public Book saveBook(Book book) {
 		return bookDao.saveBook(book);
 	}
+	public Book findBook(Integer id) {
+		return bookDao.findBook(id);
+	}
 	
 	public Book updateBook(Book book,Integer id) {
 		return bookDao.updateBook(book,id);

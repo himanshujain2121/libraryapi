@@ -24,6 +24,9 @@ public class BookDao {
 	public Book saveBook(Book book) {
 		return bookRepository.save(book);
 	}
+	public Book findBook(Integer id) {
+		return bookRepository.findByBid(id);
+	}
 	
 	public Book updateBook(Book book, Integer id) {
 		Book bookData = bookRepository.findByBid(id);
