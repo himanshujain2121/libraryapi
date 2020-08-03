@@ -27,6 +27,7 @@ public class LibraryServiceTest {
 	  when(libraryDao.getAllBooks()).thenReturn(getAllLibraryBooks());
 	  LibraryService libraryService = new LibraryService(libraryDao);
 	  List<Library> lib = libraryService.getAllBooks();
+	  assertEquals(lib.size(), 0);
 	}
 	
   public static List<Library> getAllLibraryBooks(){
